@@ -116,3 +116,7 @@ PRODUCT_COPY_FILES += \
 # Codec
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media-codec-blacklist:system/etc/media-codec-blacklist
+
+# Google Play
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/google.xml:system/etc/sysconfig/google.xml

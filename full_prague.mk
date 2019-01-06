@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -15,10 +14,16 @@
 # limitations under the License.
 #
 
-set -e
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
-# Required!
-export DEVICE=prague
-export VENDOR=huawei
+# Inherit from prague device
+$(call inherit-product, device/huawei/prague/device.mk)
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := prague
+PRODUCT_NAME := full_prague
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := prague

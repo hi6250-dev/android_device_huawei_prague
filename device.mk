@@ -14,7 +14,16 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
+$(call inherit-product, vendor/huawei/prague/prague-vendor.mk)
+
+# Display Size
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -27,9 +36,9 @@ PRODUCT_COPY_FILES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.kirin970.rc \
-    init.kirin970.ab.rc \
-    init.kirin970.environ.rc
+    init.hi6250.rc \
+    init.hi6250.ab.rc \
+    init.hi6250.environ.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -81,7 +90,7 @@ PRODUCT_PACKAGES += \
 
 # Release tools
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/releasetools.kirin970.sh:install/bin/releasetools.kirin970.sh
+    $(LOCAL_PATH)/releasetools/releasetools.hi6250.sh:install/bin/releasetools.hi6250.sh
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \

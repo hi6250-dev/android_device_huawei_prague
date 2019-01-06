@@ -16,7 +16,10 @@
 
 include build/make/target/board/generic_arm64_a/BoardConfig.mk
 
-VENDOR_PATH := device/huawei/kirin970-common
+DEVICE_PATH := device/huawei/prague
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := prague,hi6250
 
 # Platform
 TARGET_ARCH := arm64
@@ -37,7 +40,7 @@ TARGET_NO_KERNEL := false
 TARGET_PREBUILT_KERNEL := /dev/null
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
 # Extended Filesystem Support
@@ -45,27 +48,27 @@ TARGET_EXFAT_DRIVER := exfat
 
 # Lineage hardware
 BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/lineagehw
+    $(DEVICE_PATH)/lineagehw
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736
 
 # Properties
-TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Radio
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Recovery
 BOARD_PROVIDES_BOOTLOADER_MESSAGE := true
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.kirin970
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.hi6250
 
 # Release tools
-TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # SELinux
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 
 # Shims
 TARGET_LD_SHIM_LIBS := \

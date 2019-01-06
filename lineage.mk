@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -15,10 +14,12 @@
 # limitations under the License.
 #
 
-set -e
+$(call inherit-product, device/huawei/berkeley/full_prague.mk)
 
-# Required!
-export DEVICE=prague
-export VENDOR=huawei
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+PRODUCT_NAME := lineage_prague
+PRODUCT_DEVICE := prague
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := Huawei P8 lite 2017

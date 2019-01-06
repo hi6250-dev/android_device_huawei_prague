@@ -12,3 +12,6 @@ ro.vendor.qti.sys.fw.bg_apps_limit=60
 # RIL
 persist.sys.signal.level=openkirin
 ro.huaweiril=true
+
+# Make sdcards visibile in StorageManager
+persist.sys.adoptable_fbe=true

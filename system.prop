@@ -18,3 +18,6 @@ persist.sys.adoptable_fbe=true
 
 # GSI always generate dex pre-opt in system image
 ro.cp_system_other_odex=0
+
+# Security Patch
+ro.build.version.security_patch_sys=2018-12-05

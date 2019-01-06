@@ -120,3 +120,7 @@ PRODUCT_COPY_FILES += \
 # Google Play
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/google.xml:system/etc/sysconfig/google.xml
+
+# Speed-up stuff
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.image-dex2oat-filter=verify-none

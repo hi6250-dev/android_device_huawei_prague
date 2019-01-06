@@ -23,3 +23,6 @@ PRODUCT_NAME := lineage_prague
 PRODUCT_DEVICE := prague
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Huawei P8 lite 2017
+PRODUCT_MANUFACTURER := Huawei
+
+PRODUCT_GMS_CLIENTID_BASE := android-huawei

@@ -124,3 +124,8 @@ PRODUCT_COPY_FILES += \
 # Speed-up stuff
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-filter=verify-none
+
+# Hotword fix
+PRODUCT_PACKAGES += \
+    HotwordEnrollmentOKGoogleHI6403 \
+    HotwordEnrollmentXGoogleHI6403

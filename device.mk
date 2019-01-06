@@ -106,3 +106,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-compat/vndk-detect:system/bin/vndk-detect \
     $(LOCAL_PATH)/vndk-compat/ld.config.compat.txt:system/etc/ld.config.compat.txt \
     $(LOCAL_PATH)/vndk-compat/vndk-compat.rc:system/etc/init/vndk-compat.rc
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps_debug.conf
+

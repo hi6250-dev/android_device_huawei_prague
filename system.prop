@@ -36,3 +36,6 @@ debug.sf.hw=1
 hwui.disable_vsync=true 
 ro.config.enable.hw_accel=true 
 video.accelerate.hw=1
+
+# Fingerprint Gestures
+sys.fpnav.enabled=1

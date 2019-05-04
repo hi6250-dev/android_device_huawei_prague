@@ -18,12 +18,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 source build/envsetup.sh
 
-DEFAULT_URL="https://raw.githubusercontent.com/DarkJoker360/prague_patches/lineage-15.1" 
+DEFAULT_URL="https://raw.githubusercontent.com/DarkJoker360/prague_patches/lineage-15.1"
 
 cd build/core
 echo "Patching build/core..."
 wget $DEFAULT_URL/build/core/0001-Set-ro.build.fingerprint-in-system-etc-prop.default.patch
-wget $DEFAULT_URL/build/core/0002-Shorten-build-id.patch 
+wget $DEFAULT_URL/build/core/0002-Shorten-build-id.patch
 echo " "
 patch -p1< 0001-Set-ro.build.fingerprint-in-system-etc-prop.default.patch
 patch -p1< 0002-Shorten-build-id.patch
@@ -70,7 +70,7 @@ patch -p1< 0006-property-matching-RROs-allow-to-prefix-the-value-wit.patch
 patch -p1< 0007-Read-security-patches-from-another-prop.patch
 cd ..
 
-cd native 
+cd native
 echo "Patching frameworks/native..."
 wget $DEFAULT_URL/frameworks/native/0001-Huawei-HWC-doesn-t-understand-0-0-0-0.patch
 echo " "
@@ -103,12 +103,10 @@ cd ../../..
 cd system/bt
 echo "Patching system/bt..."
 wget $DEFAULT_URL/system/bt/0001-Make-BTM_BYPASS_EXTRA_ACL_SETUP-dynamic.patch
-wget https://github.com/DarkJoker360/platform_system_bt/commit/b6b4b2af61d89f5ea54373f71abef73b2eb00c83.patch 
-wget https://github.com/DarkJoker360/platform_system_bt/commit/7b3098fe4b17d6018721b289b6387c841fd7f4dc.patch
+wget https://github.com/DarkJoker360/platform_system_bt/commit/b6b4b2af61d89f5ea54373f71abef73b2eb00c83.patch
 echo " "
 patch -p1< 0001-Make-BTM_BYPASS_EXTRA_ACL_SETUP-dynamic.patch
 patch -p1< b6b4b2af61d89f5ea54373f71abef73b2eb00c83.patch
-patch -p1< 7b3098fe4b17d6018721b289b6387c841fd7f4dc.patch
 cd ..
 
 cd core
@@ -121,20 +119,20 @@ cd ..
 cd libvintf
 echo "Patching system/libvintf..."
 wget $DEFAULT_URL/system/libvintf/0001-HACK-Support-sepolicy-vndk-26.patch
-wget $DEFAULT_URL/system/libvintf/0002-Say-we-support-AVB-1.0.patch 
+wget $DEFAULT_URL/system/libvintf/0002-Say-we-support-AVB-1.0.patch
 echo " "
 patch -p1< 0001-HACK-Support-sepolicy-vndk-26.patch
-patch -p1< 0002-Say-we-support-AVB-1.0.patch 
+patch -p1< 0002-Say-we-support-AVB-1.0.patch
 cd ..
 
-cd netd 
+cd netd
 echo "Patching system/netd..."
 wget $DEFAULT_URL/system/netd/0001-Huawei-Kirin-960-accept-broken-rpfilter-match.patch
 echo " "
 patch -p1< 0001-Huawei-Kirin-960-accept-broken-rpfilter-match.patch
 cd ..
 
-cd sepolicy 
+cd sepolicy
 echo "Patching system/netd..."
 wget $DEFAULT_URL/system/sepolicy/0001-add-file-contexts-for-exfat.patch
 echo " "

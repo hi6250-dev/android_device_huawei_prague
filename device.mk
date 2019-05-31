@@ -25,6 +25,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.bcm43xx.rc \

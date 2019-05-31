@@ -19,6 +19,9 @@ $(call inherit-product, device/huawei/prague/full_prague.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Inherit DarkJoker360's Vendor
+$(call inherit-product-if-exists, vendor/DarkJoker360/DarkJoker360.mk)
+
 TARGET_AOSP_BASED := true
 
 PRODUCT_NAME := aosp_prague

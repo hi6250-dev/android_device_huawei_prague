@@ -39,6 +39,11 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# GPS
+PRODUCT_COPY_FILES += \
+    device/huawei/prague/gps/gps.conf:system/etc/gps.conf \
+    device/huawei/prague/gps/gps_debug.conf:system/etc/gps_debug.conf \
+
 # HIDL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml

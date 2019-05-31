@@ -29,6 +29,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml
 
+# Codecs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/etc/media-codec-blacklist:system/etc/media-codec-blacklist
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.bcm43xx.rc \

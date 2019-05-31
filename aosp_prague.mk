@@ -30,5 +30,5 @@ PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Huawei P8 Lite 2017
 
 PRODUCT_PACKAGES += \
-    Launcher3 \
+    Launcher3QuickStep \
     messaging
